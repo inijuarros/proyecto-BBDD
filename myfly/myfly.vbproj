@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\SQLite.3.13.0\build\net45\SQLite.props" Condition="Exists('..\packages\SQLite.3.13.0\build\net45\SQLite.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF3F4BF5-B165-4E33-85AE-C1DFB3AB75EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>myfly.My.MyApplication</StartupObject>
+    <RootNamespace>myfly</RootNamespace>
+    <AssemblyName>myfly</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>myfly.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>myfly.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.2\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.112.2\lib\net40\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.112.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.112.2\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Aeropuerto.vb" />
+    <Compile Include="Clases\Avion.vb" />
+    <Compile Include="Clases\Pasajero.vb" />
+    <Compile Include="Clases\Reservas.vb" />
+    <Compile Include="Clases\Tripulacion1.vb" />
+    <Compile Include="Clases\usuario.vb" />
+    <Compile Include="Clases\Vuelo.vb" />
+    <Compile Include="Componentes menu admin\AñadirAerolinea.Designer.vb">
+      <DependentUpon>AñadirAerolinea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirAerolinea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirAeropuerto.Designer.vb">
+      <DependentUpon>AñadirAeropuerto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirAeropuerto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirAvion.Designer.vb">
+      <DependentUpon>AñadirAvion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirAvion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirVuelo.Designer.vb">
+      <DependentUpon>AñadirVuelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\AñadirVuelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\CrearTripulacion.Designer.vb">
+      <DependentUpon>CrearTripulacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\CrearTripulacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\DesprogramarVuelo.Designer.vb">
+      <DependentUpon>DesprogramarVuelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\DesprogramarVuelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAerolinea.Designer.vb">
+      <DependentUpon>EliminarAerolinea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAerolinea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAeropuerto.Designer.vb">
+      <DependentUpon>EliminarAeropuerto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAeropuerto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAvion.Designer.vb">
+      <DependentUpon>EliminarAvion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarAvion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarTripulacion.Designer.vb">
+      <DependentUpon>EliminarTripulacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarTripulacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarVuelo.Designer.vb">
+      <DependentUpon>EliminarVuelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\EliminarVuelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Componentes menu admin\ProgramarVuelo.Designer.vb">
+      <DependentUpon>ProgramarVuelo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes menu admin\ProgramarVuelo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos\AccesoDatos.vb" />
+    <Compile Include="Dominio\Nexo.vb" />
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu.Designer.vb">
+      <DependentUpon>menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menuAdmin.Designer.vb">
+      <DependentUpon>menuAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="menuAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Componentes menu admin\AñadirAerolinea.resx">
+      <DependentUpon>AñadirAerolinea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\AñadirAeropuerto.resx">
+      <DependentUpon>AñadirAeropuerto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\AñadirAvion.resx">
+      <DependentUpon>AñadirAvion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\AñadirVuelo.resx">
+      <DependentUpon>AñadirVuelo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\CrearTripulacion.resx">
+      <DependentUpon>CrearTripulacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\DesprogramarVuelo.resx">
+      <DependentUpon>DesprogramarVuelo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\EliminarAerolinea.resx">
+      <DependentUpon>EliminarAerolinea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\EliminarAeropuerto.resx">
+      <DependentUpon>EliminarAeropuerto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\EliminarAvion.resx">
+      <DependentUpon>EliminarAvion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\EliminarTripulacion.resx">
+      <DependentUpon>EliminarTripulacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\EliminarVuelo.resx">
+      <DependentUpon>EliminarVuelo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes menu admin\ProgramarVuelo.resx">
+      <DependentUpon>ProgramarVuelo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu.resx">
+      <DependentUpon>menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menuAdmin.resx">
+      <DependentUpon>menuAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLite.3.13.0\build\net45\SQLite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLite.3.13.0\build\net45\SQLite.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" />
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>
